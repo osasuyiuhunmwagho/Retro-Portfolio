@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const PROJECTS = [
   {
     title: "Skin Cancer Detector",
-    tag: "COMP 3106 · PyTorch · ResNet18",
+    tag: " PyTorch · ResNet18",
     blurb:
       "Team project: deep learning agent for skin lesion images — benign vs malignant with transfer learning, augmentation, and evaluation metrics on HAM-style data.",
     href: "https://github.com/2025F-COMP3106/project-group-41",

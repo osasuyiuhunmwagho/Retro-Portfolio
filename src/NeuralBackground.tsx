@@ -47,7 +47,8 @@ function buildNetwork() {
   return { nodes, edges };
 }
 
-const SCREEN_Y_ZONES = [18, 38, 62, 82];
+/* Home: Projects, Experience, About, Contact (top-right) */
+const SCREEN_Y_ZONES = [18, 38, 62, 16];
 
 function proximityOpacity(
   nodeY: number,

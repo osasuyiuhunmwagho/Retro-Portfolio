@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import NeuralBackground from "../NeuralBackground";
 import type { MonitorOutletContext } from "../monitorOutletContext";
 
@@ -32,8 +32,12 @@ export function useMonitorPower() {
 
 export default function MonitorLayout() {
   const location = useLocation();
-  const [isOn, setOn] = useState(true);
+  /** Fresh visit / full reload: screen starts off; user powers on (state lives for SPA session only). */
+  const [isOn, setOn] = useState(false);
   const [hoveredNav, setHoveredNav] = useState<number | null>(null);
+  const reduceMotion = useReducedMotion();
+
+  const fade = reduceMotion ? 0 : 0.25;
 
   const toggle = () => setOn((v) => !v);
 
@@ -46,7 +50,12 @@ export default function MonitorLayout() {
   return (
     <MonitorPowerContext.Provider value={{ isOn, setOn, toggle }}>
       <section className="relative h-[100dvh] min-h-[100dvh] w-full overflow-hidden bg-[#0a0a0a]">
-        <div className="pointer-events-none absolute inset-0 z-0">
+        <div
+          className={`pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 ease-out ${
+            isOn ? "opacity-100" : "opacity-[0.22]"
+          }`}
+          aria-hidden
+        >
           <NeuralBackground activeScreen={hoveredNav} />
         </div>
 
@@ -98,7 +107,7 @@ export default function MonitorLayout() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.25 }}
+                    transition={{ duration: fade }}
                   >
                     <div className="absolute inset-0 z-0">
                       <NeuralBackground activeScreen={hoveredNav} />
@@ -118,13 +127,17 @@ export default function MonitorLayout() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: reduceMotion ? 0 : 0.2 }}
                   >
-                    <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-neutral-600">
+                    <p
+                      className="font-mono text-[10px] uppercase tracking-[0.4em] text-neutral-600"
+                      role="status"
+                      aria-live="polite"
+                    >
                       No signal
                     </p>
                     <p className="mt-2 font-sans text-xs text-neutral-500">
-                      Press power to turn on
+                      Press the power button below to turn on
                     </p>
                   </motion.div>
                 )}

@@ -17,42 +17,6 @@ export default function ExperiencePage() {
       </div>
 
       <div className="min-h-0 flex-1 space-y-4 overflow-y-auto overflow-x-hidden pr-1 pb-2 [scrollbar-width:thin]">
-        
-
-        <motion.article
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, delay: 0.12 }}
-          className="rounded border border-emerald-500/15 bg-black/45 p-3"
-        >
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
-            <div className="flex shrink-0 flex-col items-center gap-1.5 sm:w-28">
-              <div className="flex h-16 w-full items-center justify-center overflow-hidden rounded border border-white/10 bg-[#111]">
-                <img
-                  src="/FA.png"
-                  alt="Founder Athlete"
-                  className="h-full w-full object-cover object-center"
-                />
-              </div>
-              <span className="font-mono text-[8px] uppercase tracking-widest text-neutral-500">
-                Founder Athlete
-              </span>
-            </div>
-            <div className="min-w-0 flex-1">
-              <h3 className="font-sans text-xs font-bold uppercase tracking-wide text-white [text-shadow:0_0_6px_rgba(34,197,94,0.35)]">
-                Founder Athlete
-              </h3>
-              <p className="mt-0.5 font-mono text-[8px] uppercase tracking-wider text-emerald-500/85">
-                Founder · athlete-first product
-              </p>
-              <p className="mt-1.5 font-sans text-[9px] leading-snug text-neutral-400 sm:text-[10px]">
-                Built an athlete-centered product from the ground up: brand,
-                early journeys, and clarity for people balancing sport, school,
-                and career.
-              </p>
-            </div>
-          </div>
-        </motion.article>
         <motion.article
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,12 +45,54 @@ export default function ExperiencePage() {
               <h3 className="font-sans text-xs font-bold uppercase tracking-wide text-white [text-shadow:0_0_6px_rgba(34,197,94,0.35)]">
                 RealVictors
               </h3>
-              <p className="mt-0.5 font-mono text-[8px] uppercase tracking-wider text-emerald-500/85">
-                Sports social platform
-              </p>
+              <div className="mt-0.5 flex flex-wrap items-baseline justify-between gap-x-2 gap-y-1 font-mono text-[7px] uppercase tracking-wider text-emerald-500/85 sm:text-[8px]">
+                <span>Co-founder · Sports social platform</span>
+                <span className="text-right font-mono text-[7px] normal-case tracking-normal text-neutral-400 sm:text-[8px] sm:whitespace-nowrap">
+                  September 2025 – present
+                </span>
+              </div>
               <p className="mt-1.5 font-sans text-[9px] leading-snug text-neutral-400 sm:text-[10px]">
-                Worked on RealVictors — product direction, UI polish, and shipping
-                features for a sports-focused social experience on the web.
+                I am co-founder of RealVictors. This is a sports-focused mobile app to be launched May
+                1st. I help shape product direction, UI polish, and shipping features that connect 
+                athletes around the games they care about.
+              </p>
+            </div>
+          </div>
+        </motion.article>
+
+        <motion.article
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, delay: 0.12 }}
+          className="rounded border border-emerald-500/15 bg-black/45 p-3"
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
+            <div className="flex shrink-0 flex-col items-center gap-1.5 sm:w-28">
+              <div className="flex h-16 w-full items-center justify-center overflow-hidden rounded border border-white/10 bg-[#111]">
+                <img
+                  src="/FA.png"
+                  alt="Founder Athlete"
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+              <span className="font-mono text-[8px] uppercase tracking-widest text-neutral-500">
+                Founder Athlete
+              </span>
+            </div>
+            <div className="min-w-0 flex-1">
+              <h3 className="font-sans text-xs font-bold uppercase tracking-wide text-white [text-shadow:0_0_6px_rgba(34,197,94,0.35)]">
+                Founder Athlete
+              </h3>
+              <div className="mt-0.5 flex flex-wrap items-baseline justify-between gap-x-2 gap-y-1 font-mono text-[7px] uppercase tracking-wider text-emerald-500/85 sm:text-[8px]">
+                <span>Full stack developer intern</span>
+                <span className="text-right font-mono text-[7px] normal-case tracking-normal text-neutral-400 sm:text-[8px] sm:whitespace-nowrap">
+                  Remote (Toronto, Ontario) · June – October 2025
+                </span>
+              </div>
+              <p className="mt-1.5 font-sans text-[9px] leading-snug text-neutral-400 sm:text-[10px]">
+                I was a full stack developer intern at Founder Athlete, working on an
+                athlete-centered product from the ground up — including the personalized training
+                engine, and the personal landing site the platform.
               </p>
             </div>
           </div>
