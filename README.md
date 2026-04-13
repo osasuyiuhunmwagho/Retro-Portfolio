@@ -1,6 +1,6 @@
 # Portfolio
 
-## Tech stack
+## Tech stack Used: 
 
 - **Node.js** (with npm)
 - **React** 19
@@ -10,4 +10,4 @@
 - **Framer Motion**
 - **React Router**
 
-Visual assets and layout were **designed in Adobe Photoshop**.
+Visual assets and layout were **designed in Adobe Photoshop by ME**.

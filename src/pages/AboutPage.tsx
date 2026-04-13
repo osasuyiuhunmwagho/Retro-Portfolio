@@ -54,8 +54,7 @@ export default function AboutPage() {
         >
           My name is <span className="font-semibold text-neutral-200">Osasuyi Uhunmwagho</span>
           . I&apos;m a third-year Computer Science (Honours) student specializing in Machine Learning
-          and Artificial Intelligence, focused on building software that is both useful and thoughtfully
-          designed.
+          and Artificial Intelligence, that solves real problems and I think good design isn't optional.
         </motion.p>
 
         <motion.div
@@ -68,7 +67,9 @@ export default function AboutPage() {
             Why tech
           </p>
           <p className="font-sans text-[10px] leading-relaxed text-neutral-300 sm:text-[11px]">
-            I chose this field because it lets you take an idea and turn it into something real that. This stems from a passion of creation and growing to solving complex problems(in Maths, Physics,etc.) generally. 
+          I've always been the type to want to build things and see it materialize. Pair that with a brain that
+genuinely enjoys hard math and physics problems, and CS felt inevitable — it's
+where creation meets problem-solving.
           
           </p>
         </motion.div>
@@ -90,7 +91,7 @@ export default function AboutPage() {
                Soccer
             </li>
             <li>
-              tennis; regular 5K runs for fitness and headspace
+              tennis; regular 5K runs to balance out screentime 
             </li>
 
           </ul>
