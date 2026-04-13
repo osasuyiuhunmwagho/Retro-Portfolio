@@ -91,7 +91,7 @@ export default function ExperiencePage() {
               </div>
               <p className="mt-1.5 font-sans text-[9px] leading-snug text-neutral-400 sm:text-[10px]">
                 I was a full stack developer intern at Founder Athlete, working on an
-                athlete-centered product from the ground up — including the personalized training
+                athlete-centered product from the ground up, including the personalized training
                 engine, and the personal landing site the platform.
               </p>
             </div>

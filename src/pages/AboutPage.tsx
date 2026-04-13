@@ -68,7 +68,7 @@ export default function AboutPage() {
           </p>
           <p className="font-sans text-[10px] leading-relaxed text-neutral-300 sm:text-[11px]">
           I've always been the type to want to build things and see it materialize. Pair that with a brain that
-genuinely enjoys hard math and physics problems, and CS felt inevitable — it's
+genuinely enjoys hard math and physics problems, and CS felt inevitable because it's
 where creation meets problem-solving.
           
           </p>
